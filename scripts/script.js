@@ -96,6 +96,30 @@ new Vue({
           source: "https://hd1.djjohal.com/320/514864/True%20Talks%20-%20Jassa%20Dhillon%20(DJJOhAL.Com).mp3",
           url: "https://www.youtube.com/watch?v=gqlajedOVC8",
           favorited: false
+        },
+        {
+          name: "Remember",
+          artist: "Zorawar",
+          cover: "https://lq.djjohal.com/covers/728961/Remember.jpg",
+          source: "https://hd1.djjohal.com/320/514881/Remember%20-%20Zorawar%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=9E4HQQXZaAA",
+          favorited: false
+        },
+        {
+          name: "Sarkare",
+          artist: "Gill Manuke",
+          cover: "https://lq.djjohal.com/covers/728960/Sarkare.jpg",
+          source: "https://hd1.djjohal.com/320/514880/Sarkare%20-%20Gill%20Manuke%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=C3B4Z6Nf27Y",
+          favorited: false
+        },
+        {
+          name: "Sikh Soldier",
+          artist: "Sukhi Badrukhan",
+          cover: "https://lq.djjohal.com/covers/728959/Sikh%20Soldier.jpg",
+          source: "https://hd1.djjohal.com/320/514879/Sikh%20Soldier%20-%20Sukhi%20Badrukhan%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=ntm_4mhsASw",
+          favorited: false
         }
       ],
       currentTrack: null,
