@@ -50,6 +50,46 @@ new Vue({
           favorited: false
         },
         {
+          name: "The Sikh Heritage",
+          artist: "Sukhi Badrukhan",
+          cover: "https://lq.djjohal.com/covers/728971/The%20Sikh%20Heritage.jpg",
+          source: "https://hd1.djjohal.com/320/514900/The%20Sikh%20Heritage%20-%20Sukhi%20Badrukhan%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=zapO-xFkyzc",
+          favorited: false
+        },
+        {
+          name: "Daadi Maa",
+          artist: "Palwinder Tohra",
+          cover: "https://lq.djjohal.com/covers/728969/Daadi%20Maa.jpg",
+          source: "https://hd1.djjohal.com/320/514893/Daadi%20Maa%20-%20Palwinder%20Tohra%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=_Zn8MtrMHM0",
+          favorited: false
+        },
+        {
+          name: "Parivar Vichora",
+          artist: "Khazala",
+          cover: "https://lq.djjohal.com/covers/728968/Parivar%20Vichora.jpg",
+          source: "https://hd1.djjohal.com/320/514892/Parivar%20Vichora%20-%20Khazala%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=S4jvJ1B7018",
+          favorited: false
+        },
+        {
+          name: "Peer e Hind",
+          artist: "Surinder Baba",
+          cover: "https://lq.djjohal.com/covers/728967/Peer%20e%20Hind.jpg",
+          source: "https://hd1.djjohal.com/320/514891/Peer%20e%20Hind%20-%20Surinder%20Baba%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=BKPiV0vMGDk",
+          favorited: false
+        },
+        {
+          name: "Baazan Wale De Puttar Ne",
+          artist: "Tarsem Jassar",
+          cover: "https://lq.djjohal.com/covers/728962/Baazan%20Wale%20De%20Puttar%20Ne.jpg",
+          source: "https://hd1.djjohal.com/320/514882/Baazan%20Wale%20De%20Puttar%20Ne%20-%20Tarsem%20Jassar%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=269LNWNpkKY",
+          favorited: false
+        },
+        {
           name: "True Talks",
           artist: "Jassa Dhillon",
           cover: "https://lq.djjohal.com/covers/728944/True%20Talks.jpg",
