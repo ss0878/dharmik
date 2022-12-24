@@ -18,6 +18,14 @@ new Vue({
           favorited: false
         },
         {
+          name: "Babe",
+          artist: "Ravinder Grewal",
+          cover: "https://lq.djjohal.com/covers/728977/Babe.jpg",
+          source: "https://hd1.djjohal.com/320/514906/Babe%20-%20Ravinder%20Grewal%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=1iQvdTmB1RY",
+          favorited: false
+        },
+        {
           name: "Waar",
           artist: "Amar Sehmbi",
           cover: "https://lq.djjohal.com/covers/728986/Waar.jpg",
