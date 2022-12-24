@@ -176,6 +176,14 @@ new Vue({
           source: "https://hd1.djjohal.com/320/514879/Sikh%20Soldier%20-%20Sukhi%20Badrukhan%20(DJJOhAL.Com).mp3",
           url: "https://www.youtube.com/watch?v=ntm_4mhsASw",
           favorited: false
+        },
+        {
+          name: "Khushiyan",
+          artist: "Ravinder Grewal",
+          cover: "https://lq.djjohal.com/covers/728594/Khushiyan.jpg",
+          source: "https://hd1.djjohal.com/320/514366/Khushiyan%20-%20Ravinder%20Grewal%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=PHPgkebudPs",
+          favorited: false
         }
       ],
       currentTrack: null,
