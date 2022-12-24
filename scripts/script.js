@@ -200,6 +200,14 @@ new Vue({
           source: "https://hd1.djjohal.com/320/509908/Bani%20Aayi%20-%20Ravinder%20Grewal%20(DJJOhAL.Com).mp3",
           url: "https://www.youtube.com/watch?v=Bubh8A-C0Ow",
           favorited: false
+        },
+        {
+          name: "Legacy",
+          artist: "Vinaypal Singh Buttar",
+          cover: "https://i.imgur.com/E5VzqxW.jpg",
+          source: "https://djpubg.com/files/download/type/320/id/17368",
+          url: "https://www.youtube.com/watch?v=r8SrAHV7xRk",
+          favorited: false
         }
       ],
       currentTrack: null,
