@@ -10,6 +10,54 @@ new Vue({
       isTimerPlaying: false,
       tracks: [
         {
+          name: "Martyrs",
+          artist: "Nirvair Pannu",
+          cover: "https://lq.djjohal.com/covers/728984/Martyrs.jpg",
+          source: "https://hd1.djjohal.com/320/514917/Martyrs%20-%20Nirvair%20Pannu%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=VwA5PbR6pTY",
+          favorited: false
+        },
+        {
+          name: "Waar",
+          artist: "Amar Sehmbi",
+          cover: "https://lq.djjohal.com/covers/728986/Waar.jpg",
+          source: "https://hd1.djjohal.com/320/514919/Waar%20-%20Amar%20Sehmbi%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=QfR78i3EBVg",
+          favorited: false
+        },
+        {
+          name: "Putt Baajan Aale De",
+          artist: "Romey Maan",
+          cover: "https://lq.djjohal.com/covers/728985/Putt%20Baajan%20Aale%20De.jpg",
+          source: "https://hd1.djjohal.com/320/514918/Putt%20Baajan%20Aale%20De%20-%20Romey%20Maan%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=zCZ4_i_K_yU",
+          favorited: false
+        },
+        {
+          name: "Jaikaara",
+          artist: "Gulab Sidhu",
+          cover: "https://lq.djjohal.com/covers/728993/Jaikaara.jpg",
+          source: "https://hd1.djjohal.com/320/514926/Jaikaara%20-%20Gulab%20Sidhu%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=bLR10q9BSC8",
+          favorited: false
+        },
+        {
+          name: "Sheran De Putt",
+          artist: "Sippy Gill",
+          cover: "https://lq.djjohal.com/covers/728990/Sheran%20De%20Putt.jpg",
+          source: "https://hd1.djjohal.com/320/514923/Sheran%20De%20Putt%20-%20Sippy%20Gill%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=tw_2Hi47-es",
+          favorited: false
+        },
+        {
+          name: "Veer Ras",
+          artist: "Babbu Maan",
+          cover: "https://lq.djjohal.com/covers/728992/Veer%20Ras.jpg",
+          source: "https://hd1.djjohal.com/320/514925/Veer%20Ras%20-%20Babbu%20Maan%20(DJJOhAL.Com).mp3",
+          url: "https://m.youtube.com/watch?v=ikK4r29v2DE",
+          favorited: false
+        },
+        {
           name: "Kesari Nishan",
           artist: "Jass Bajwa",
           cover: "https://lq.djjohal.com/covers/728983/Kesari%20Nishan.jpg",
