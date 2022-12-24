@@ -82,6 +82,14 @@ new Vue({
           favorited: false
         },
         {
+          name: "Sikhi Da Mehal",
+          artist: "Geeta Zaildar",
+          cover: "https://lq.djjohal.com/covers/728963/Sikhi%20Da%20Mehal.jpg",
+          source: "https://hd1.djjohal.com/320/514883/Sikhi%20Da%20Mehal%20-%20Geeta%20Zaildar%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=Z4LCbJOsR-U",
+          favorited: false
+        },
+        {
           name: "Bajan Waleya",
           artist: "Jordan Sandhu",
           cover: "https://lq.djjohal.com/covers/728981/Bajan%20Waleya.jpg",
