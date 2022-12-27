@@ -10,6 +10,38 @@ new Vue({
       isTimerPlaying: false,
       tracks: [
         {
+          name: "Sirhind Fateh",
+          artist: "Gulab Sidhu",
+          cover: "https://lq.djjohal.com/covers/729002/Sirhind%20Fateh.jpg",
+          source: "https://hd1.djjohal.com/320/514937/Sirhind%20Fateh%20-%20Gulab%20Sidhu%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=8_qDZQep1Q4",
+          favorited: false
+        },
+        {
+          name: "Ardaas",
+          artist: "Kanwar Grewal & Harf Cheema",
+          cover: "https://lq.djjohal.com/covers/729000/Ardaas.jpg",
+          source: "https://hd1.djjohal.com/320/514933/Ardaas%20-%20Kanwar%20Grewal%20%20Harf%20Cheema%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=oa2dsPB5RXg",
+          favorited: false
+        },
+        {
+          name: "Takkar",
+          artist: "Himmat Sandhu",
+          cover: "https://lq.djjohal.com/covers/728999/Takkar.jpg",
+          source: "https://hd1.djjohal.com/320/514932/Takkar%20-%20Himmat%20Sandhu%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=ipqUnwS6qPg",
+          favorited: false
+        },
+        {
+          name: "Sache Patshah",
+          artist: "Kanwar Grewal",
+          cover: "https://lq.djjohal.com/covers/728997/Sache%20Patshah.jpg",
+          source: "https://hd1.djjohal.com/320/514930/Sache%20Patshah%20-%20Kanwar%20Grewal%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=MK_OTEr2DMc",
+          favorited: false
+        },
+        {
           name: "Martyrs",
           artist: "Nirvair Pannu",
           cover: "https://lq.djjohal.com/covers/728984/Martyrs.jpg",
