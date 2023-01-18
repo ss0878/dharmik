@@ -9,6 +9,22 @@ new Vue({
       currentTime: null,
       isTimerPlaying: false,
       tracks: [
+         {
+          name: "Vaar",
+          artist: "Prem Dhillon",
+          cover: "https://lq.djjohal.com/covers/729137/Vaar.jpg",
+          source: "https://hd1.djjohal.com/320/515137/Vaar%20-%20Prem%20Dhillon%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=jVyAzDELQPo",
+          favorited: false
+        }, 
+        {
+          name: "Putt Dashmesh De",
+          artist: "Ft. Jodha Husan",
+          cover: "https://lq.djjohal.com/covers/729135/Putt%20Dashmesh%20De.jpg",
+          source: "https://hd1.djjohal.com/320/515135/Putt%20Dashmesh%20De%20-%20Husan%20(DJJOhAL.Com).mp3",
+          url: "https://www.youtube.com/watch?v=Ad7jVzTxiKI",
+          favorited: false
+        },
         {
           name: "Sirhind Fateh",
           artist: "Gulab Sidhu",
