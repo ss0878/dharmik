@@ -9,7 +9,23 @@ new Vue({
       currentTime: null,
       isTimerPlaying: false,
       tracks: [
-         {
+        {
+          name: "Sher Singh",
+          artist: "Amrit Maan",
+          cover: "https://cover.djpunjab.is/53215/300x700/Sher-Singh-Amrit-Maan.jpg",
+          source: "https://s320.djpunjab.is/data/320/53215/301380/Sher%20Singh%20-%20Amrit%20Maan.mp3",
+          url: "https://www.youtube.com/watch?v=jvwPXUpR75o",
+          favorited: false
+        },
+        {
+          name: "Yodhey",
+          artist: "Sukh Sandhu",
+          cover: "https://cover.djpunjab.is/53214/300x700/Yodhey-Sukh-Sandhu.jpg",
+          source: "https://s320.djpunjab.is/data/320/53214/301379/Yodhey%20-%20Sukh%20Sandhu.mp3",
+          url: "https://www.youtube.com/watch?v=fXoLGZm1yE8",
+          favorited: false
+        },
+        {
           name: "Vaar",
           artist: "Prem Dhillon",
           cover: "https://lq.djjohal.com/covers/729137/Vaar.jpg",
