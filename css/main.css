@@ -362,9 +362,7 @@ body {
 }
 @media screen and (max-width: 576px), (max-height: 500px) {
   .player-controls__item.-xl {
-    margin-left: auto;
     font-size: 75px;
-    margin-right: 0;
   }
 }
 .player-controls__item.-xl:before {
