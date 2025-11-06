@@ -50,7 +50,7 @@
                 <use xlink:href="#icon-next"></use>
               </svg>
             </div>
-            <div class="player-controls__item" @click="togglePlaylist">
+            <div class="player-controls__item" @click="togglePlaylist" :class="{ active: showPlaylist }">
               <svg class="icon">
                 <use xlink:href="#icon-playlist"></use>
               </svg>
