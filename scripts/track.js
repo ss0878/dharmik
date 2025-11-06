@@ -1,6 +1,18 @@
 // Track data for the music player
 const tracks = [
   {
+    name: "Namaskar",
+    artist: "Diljit Dosanjh",
+    cover: "https://cover.djpunjab.is/58420/300x300/namaskar-diljit-dosanjh.jpg",
+    source: "https://p320.djpunjab.is/data/320/58420/308933/Nanak%20Naam%20Rakhaya%20-%20Diljit%20Dosanjh.mp3"
+  },
+  {
+    name: "Sees Di Aasees",
+    artist: "Diljit Dosanjh",
+    cover: "https://cover.djpunjab.is/58420/300x300/namaskar-diljit-dosanjh.jpg",
+    source: "https://p320.djpunjab.is/data/320/58420/308931/Sees%20Di%20Aasees%20-%20Diljit%20Dosanjh.mp3"
+  },
+  {
     name: "Nanak Naam Mile Tan Jeevan",
     artist: "Nav Dolorain",
     cover: "https://cover.djpunjab.is/58451/300x700/nanak-naam-mile-tan-jeevan-nav-dolorain.jpg",
@@ -206,3 +218,4 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
