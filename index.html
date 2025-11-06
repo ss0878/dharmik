@@ -28,11 +28,7 @@
           </div>
           <div class="player-controls">
 
-            <a :href="currentTrack.url" target="_blank" class="player-controls__item">
-              <svg class="icon">
-                <use xlink:href="#icon-link"></use>
-              </svg>
-            </a>
+            
             <div class="player-controls__item" @click="toggleShuffle" :class="{ active: shuffle }">
               <svg class="icon">
                 <use xlink:href="#icon-shuffle"></use>
@@ -88,7 +84,7 @@
           </button>
         </div>
         
-        <div class="playlist">
+        <div class="playlist" :class="{ 'show': showPlaylist }">
           <div 
             class="playlist-item" 
             v-for="(track, index) in tracks" 
