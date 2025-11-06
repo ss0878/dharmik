@@ -12,7 +12,8 @@ new Vue({
       currentTrack: null,
       currentTrackIndex: 0,
       transitionName: null,
-      showPlaylist: false
+      showPlaylist: false,
+      shuffle: false
     };
   },
   methods: {
@@ -94,17 +95,30 @@ new Vue({
       }
       this.currentTrack = this.tracks[this.currentTrackIndex];
       this.resetPlayer();
+      if (this.showPlaylist) {
+        this.scrollToActiveTrack();
+      }
+    },
+    toggleShuffle() {
+      this.shuffle = !this.shuffle;
     },
     nextTrack() {
-      this.transitionName = "scale-out";
+      this.transitionName = "scale-in";
       this.isShowCover = false;
-      if (this.currentTrackIndex < this.tracks.length - 1) {
-        this.currentTrackIndex++;
+      if (this.shuffle) {
+        this.currentTrackIndex = Math.floor(Math.random() * this.tracks.length);
       } else {
-        this.currentTrackIndex = 0;
+        if (this.currentTrackIndex < this.tracks.length - 1) {
+          this.currentTrackIndex++;
+        } else {
+          this.currentTrackIndex = 0;
+        }
       }
       this.currentTrack = this.tracks[this.currentTrackIndex];
       this.resetPlayer();
+      if (this.showPlaylist) {
+        this.scrollToActiveTrack();
+      }
     },
     resetPlayer() {
       this.barWidth = 0;
@@ -122,12 +136,31 @@ new Vue({
     },
     togglePlaylist() {
       this.showPlaylist = !this.showPlaylist;
+      if (this.showPlaylist) {
+        this.$nextTick(() => {
+          this.scrollToActiveTrack();
+        });
+      }
     },
     selectTrack(index) {
       this.currentTrackIndex = index;
       this.currentTrack = this.tracks[index];
       this.resetPlayer();
       this.play();
+      this.scrollToActiveTrack();
+    },
+    scrollToActiveTrack() {
+      this.$nextTick(() => {
+        const activeElement = this.$el.querySelector('.playlist-item.active');
+        const playlistContainer = this.$el.querySelector('.playlist');
+        if (activeElement && playlistContainer) {
+          activeElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'nearest'
+          });
+        }
+      });
     },
     updateMediaSession() {
       if ('mediaSession' in navigator) {
