@@ -8,275 +8,11 @@ new Vue({
       duration: null,
       currentTime: null,
       isTimerPlaying: false,
-      tracks: [
-        {
-          name: "Sher Singh",
-          artist: "Amrit Maan",
-          cover: "https://cover.djpunjab.is/53215/300x700/Sher-Singh-Amrit-Maan.jpg",
-          source: "https://s320.djpunjab.is/data/320/53215/301380/Sher%20Singh%20-%20Amrit%20Maan.mp3",
-          url: "https://www.youtube.com/watch?v=jvwPXUpR75o",
-          favorited: false
-        },
-        {
-          name: "Yodhey",
-          artist: "Sukh Sandhu",
-          cover: "https://cover.djpunjab.is/53214/300x700/Yodhey-Sukh-Sandhu.jpg",
-          source: "https://s320.djpunjab.is/data/320/53214/301379/Yodhey%20-%20Sukh%20Sandhu.mp3",
-          url: "https://www.youtube.com/watch?v=fXoLGZm1yE8",
-          favorited: false
-        },
-        {
-          name: "Vaar",
-          artist: "Prem Dhillon",
-          cover: "https://lq.djjohal.com/covers/729137/Vaar.jpg",
-          source: "https://hd1.djjohal.com/320/515137/Vaar%20-%20Prem%20Dhillon%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=jVyAzDELQPo",
-          favorited: false
-        }, 
-        {
-          name: "Putt Dashmesh De",
-          artist: "Ft. Jodha Husan",
-          cover: "https://lq.djjohal.com/covers/729135/Putt%20Dashmesh%20De.jpg",
-          source: "https://hd1.djjohal.com/320/515135/Putt%20Dashmesh%20De%20-%20Husan%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=Ad7jVzTxiKI",
-          favorited: false
-        },
-        {
-          name: "Sirhind Fateh",
-          artist: "Gulab Sidhu",
-          cover: "https://lq.djjohal.com/covers/729002/Sirhind%20Fateh.jpg",
-          source: "https://hd1.djjohal.com/320/514937/Sirhind%20Fateh%20-%20Gulab%20Sidhu%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=8_qDZQep1Q4",
-          favorited: false
-        },
-        {
-          name: "Ardaas",
-          artist: "Kanwar Grewal & Harf Cheema",
-          cover: "https://lq.djjohal.com/covers/729000/Ardaas.jpg",
-          source: "https://hd1.djjohal.com/320/514933/Ardaas%20-%20Kanwar%20Grewal%20%20Harf%20Cheema%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=oa2dsPB5RXg",
-          favorited: false
-        },
-        {
-          name: "Takkar",
-          artist: "Himmat Sandhu",
-          cover: "https://lq.djjohal.com/covers/728999/Takkar.jpg",
-          source: "https://hd1.djjohal.com/320/514932/Takkar%20-%20Himmat%20Sandhu%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=ipqUnwS6qPg",
-          favorited: false
-        },
-        {
-          name: "Sache Patshah",
-          artist: "Kanwar Grewal",
-          cover: "https://lq.djjohal.com/covers/728997/Sache%20Patshah.jpg",
-          source: "https://hd1.djjohal.com/320/514930/Sache%20Patshah%20-%20Kanwar%20Grewal%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=MK_OTEr2DMc",
-          favorited: false
-        },
-        {
-          name: "Martyrs",
-          artist: "Nirvair Pannu",
-          cover: "https://lq.djjohal.com/covers/728984/Martyrs.jpg",
-          source: "https://hd1.djjohal.com/320/514917/Martyrs%20-%20Nirvair%20Pannu%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=VwA5PbR6pTY",
-          favorited: false
-        },
-        {
-          name: "Babe",
-          artist: "Ravinder Grewal",
-          cover: "https://lq.djjohal.com/covers/728977/Babe.jpg",
-          source: "https://hd1.djjohal.com/320/514906/Babe%20-%20Ravinder%20Grewal%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=1iQvdTmB1RY",
-          favorited: false
-        },
-        {
-          name: "Waar",
-          artist: "Amar Sehmbi",
-          cover: "https://lq.djjohal.com/covers/728986/Waar.jpg",
-          source: "https://hd1.djjohal.com/320/514919/Waar%20-%20Amar%20Sehmbi%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=QfR78i3EBVg",
-          favorited: false
-        },
-        {
-          name: "Putt Baajan Aale De",
-          artist: "Romey Maan",
-          cover: "https://lq.djjohal.com/covers/728985/Putt%20Baajan%20Aale%20De.jpg",
-          source: "https://hd1.djjohal.com/320/514918/Putt%20Baajan%20Aale%20De%20-%20Romey%20Maan%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=zCZ4_i_K_yU",
-          favorited: false
-        },
-        {
-          name: "Jaikaara",
-          artist: "Gulab Sidhu",
-          cover: "https://lq.djjohal.com/covers/728993/Jaikaara.jpg",
-          source: "https://hd1.djjohal.com/320/514926/Jaikaara%20-%20Gulab%20Sidhu%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=bLR10q9BSC8",
-          favorited: false
-        },
-        {
-          name: "Sheran De Putt",
-          artist: "Sippy Gill",
-          cover: "https://lq.djjohal.com/covers/728990/Sheran%20De%20Putt.jpg",
-          source: "https://hd1.djjohal.com/320/514923/Sheran%20De%20Putt%20-%20Sippy%20Gill%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=tw_2Hi47-es",
-          favorited: false
-        },
-        {
-          name: "Veer Ras",
-          artist: "Babbu Maan",
-          cover: "https://lq.djjohal.com/covers/728992/Veer%20Ras.jpg",
-          source: "https://hd1.djjohal.com/320/514925/Veer%20Ras%20-%20Babbu%20Maan%20(DJJOhAL.Com).mp3",
-          url: "https://m.youtube.com/watch?v=ikK4r29v2DE",
-          favorited: false
-        },
-        {
-          name: "Kesari Nishan",
-          artist: "Jass Bajwa",
-          cover: "https://lq.djjohal.com/covers/728983/Kesari%20Nishan.jpg",
-          source: "https://hd1.djjohal.com/320/514916/Kesari%20Nishan%20-%20Jass%20Bajwa%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=1Hv62gi-N1E",
-          favorited: false
-        },
-        {
-          name: "Daadi Ji - Dhan Dhan Mata Gujri Ji",
-          artist: "Amar Sandhu",
-          cover: "https://lq.djjohal.com/covers/728982/Daadi%20Ji%202.jpg",
-          source: "https://hd1.djjohal.com/320/514915/Daadi%20Ji%202%20-%20Amar%20Sandhu%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=ck-IH-A6Y1w",
-          favorited: false
-        },
-        {
-          name: "Sikhi Da Mehal",
-          artist: "Geeta Zaildar",
-          cover: "https://lq.djjohal.com/covers/728963/Sikhi%20Da%20Mehal.jpg",
-          source: "https://hd1.djjohal.com/320/514883/Sikhi%20Da%20Mehal%20-%20Geeta%20Zaildar%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=Z4LCbJOsR-U",
-          favorited: false
-        },
-        {
-          name: "Bajan Waleya",
-          artist: "Jordan Sandhu",
-          cover: "https://lq.djjohal.com/covers/728981/Bajan%20Waleya.jpg",
-          source: "https://hd1.djjohal.com/320/514914/Bajan%20Waleya%20-%20Jordan%20Sandhu%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=HswqeDAEPOw",
-          favorited: false
-        },
-        {
-          name: "Wali Chaar Jahana Da",
-          artist: "Dhadi Jatha Gurpreet Singh Landran Wale",
-          cover: "https://lq.djjohal.com/covers/728979/Wali%20Chaar%20Jahana%20Da.jpg",
-          source: "https://hd1.djjohal.com/320/514908/Wali%20Chaar%20Jahana%20Da%20-%20Dhadi%20Jatha%20Gurpreet%20Singh%20Landran%20Wale%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=mE9Dju3kaHo",
-          favorited: false
-        },
-        {
-          name: "Zameer Singha Di",
-          artist: "Jagdeep Sangala",
-          cover: "https://lq.djjohal.com/covers/728978/Zameer%20Singha%20Di.jpg",
-          source: "https://hd1.djjohal.com/320/514907/Zameer%20Singha%20Di%20-%20Jagdeep%20Sangala%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=LmmOqXXUzyg",
-          favorited: false
-        },
-        {
-          name: "The Sikh Heritage",
-          artist: "Sukhi Badrukhan",
-          cover: "https://lq.djjohal.com/covers/728971/The%20Sikh%20Heritage.jpg",
-          source: "https://hd1.djjohal.com/320/514900/The%20Sikh%20Heritage%20-%20Sukhi%20Badrukhan%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=zapO-xFkyzc",
-          favorited: false
-        },
-        {
-          name: "Daadi Maa",
-          artist: "Palwinder Tohra",
-          cover: "https://lq.djjohal.com/covers/728969/Daadi%20Maa.jpg",
-          source: "https://hd1.djjohal.com/320/514893/Daadi%20Maa%20-%20Palwinder%20Tohra%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=_Zn8MtrMHM0",
-          favorited: false
-        },
-        {
-          name: "Parivar Vichora",
-          artist: "Khazala",
-          cover: "https://lq.djjohal.com/covers/728968/Parivar%20Vichora.jpg",
-          source: "https://hd1.djjohal.com/320/514892/Parivar%20Vichora%20-%20Khazala%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=S4jvJ1B7018",
-          favorited: false
-        },
-        {
-          name: "Peer e Hind",
-          artist: "Surinder Baba",
-          cover: "https://lq.djjohal.com/covers/728967/Peer%20e%20Hind.jpg",
-          source: "https://hd1.djjohal.com/320/514891/Peer%20e%20Hind%20-%20Surinder%20Baba%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=BKPiV0vMGDk",
-          favorited: false
-        },
-        {
-          name: "Baazan Wale De Puttar Ne",
-          artist: "Tarsem Jassar",
-          cover: "https://lq.djjohal.com/covers/728962/Baazan%20Wale%20De%20Puttar%20Ne.jpg",
-          source: "https://hd1.djjohal.com/320/514882/Baazan%20Wale%20De%20Puttar%20Ne%20-%20Tarsem%20Jassar%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=269LNWNpkKY",
-          favorited: false
-        },
-        {
-          name: "True Talks",
-          artist: "Jassa Dhillon",
-          cover: "https://lq.djjohal.com/covers/728944/True%20Talks.jpg",
-          source: "https://hd1.djjohal.com/320/514864/True%20Talks%20-%20Jassa%20Dhillon%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=gqlajedOVC8",
-          favorited: false
-        },
-        {
-          name: "Remember",
-          artist: "Zorawar",
-          cover: "https://lq.djjohal.com/covers/728961/Remember.jpg",
-          source: "https://hd1.djjohal.com/320/514881/Remember%20-%20Zorawar%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=9E4HQQXZaAA",
-          favorited: false
-        },
-        {
-          name: "Sarkare",
-          artist: "Gill Manuke",
-          cover: "https://lq.djjohal.com/covers/728960/Sarkare.jpg",
-          source: "https://hd1.djjohal.com/320/514880/Sarkare%20-%20Gill%20Manuke%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=C3B4Z6Nf27Y",
-          favorited: false
-        },
-        {
-          name: "Sikh Soldier",
-          artist: "Sukhi Badrukhan",
-          cover: "https://lq.djjohal.com/covers/728959/Sikh%20Soldier.jpg",
-          source: "https://hd1.djjohal.com/320/514879/Sikh%20Soldier%20-%20Sukhi%20Badrukhan%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=ntm_4mhsASw",
-          favorited: false
-        },
-        {
-          name: "Khushiyan",
-          artist: "Ravinder Grewal",
-          cover: "https://lq.djjohal.com/covers/728594/Khushiyan.jpg",
-          source: "https://hd1.djjohal.com/320/514366/Khushiyan%20-%20Ravinder%20Grewal%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=PHPgkebudPs",
-          favorited: false
-        },
-        {
-          name: "Bani Aayi",
-          artist: "Ravinder Grewal",
-          cover: "https://lq.djjohal.com/covers/725132/Bani%20Aayi.jpg",
-          source: "https://hd1.djjohal.com/320/509908/Bani%20Aayi%20-%20Ravinder%20Grewal%20(DJJOhAL.Com).mp3",
-          url: "https://www.youtube.com/watch?v=Bubh8A-C0Ow",
-          favorited: false
-        },
-        {
-          name: "Legacy",
-          artist: "Vinaypal Singh Buttar",
-          cover: "https://i.imgur.com/E5VzqxW.jpg",
-          source: "https://djpubg.com/files/download/type/320/id/17368",
-          url: "https://www.youtube.com/watch?v=r8SrAHV7xRk",
-          favorited: false
-        }
-      ],
+      tracks: tracks,
       currentTrack: null,
       currentTrackIndex: 0,
-      transitionName: null
+      transitionName: null,
+      showPlaylist: false
     };
   },
   methods: {
@@ -284,9 +20,15 @@ new Vue({
       if (this.audio.paused) {
         this.audio.play();
         this.isTimerPlaying = true;
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = 'playing';
+        }
       } else {
         this.audio.pause();
         this.isTimerPlaying = false;
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = 'paused';
+        }
       }
     },
     generateTime() {
@@ -311,6 +53,15 @@ new Vue({
       }
       this.duration = durmin + ":" + dursec;
       this.currentTime = curmin + ":" + cursec;
+
+      // Update media session position state for mobile devices
+      if ('mediaSession' in navigator && this.audio.duration) {
+        navigator.mediaSession.setPositionState({
+          duration: this.audio.duration,
+          playbackRate: this.audio.playbackRate,
+          position: this.audio.currentTime
+        });
+      }
     },
     updateBar(x) {
       let progress = this.$refs.progress;
@@ -360,6 +111,7 @@ new Vue({
       this.circleLeft = 0;
       this.audio.currentTime = 0;
       this.audio.src = this.currentTrack.source;
+      this.updateMediaSession();
       setTimeout(() => {
         if(this.isTimerPlaying) {
           this.audio.play();
@@ -368,10 +120,56 @@ new Vue({
         }
       }, 300);
     },
-    favorite() {
-      this.tracks[this.currentTrackIndex].favorited = !this.tracks[
-        this.currentTrackIndex
-      ].favorited;
+    togglePlaylist() {
+      this.showPlaylist = !this.showPlaylist;
+    },
+    selectTrack(index) {
+      this.currentTrackIndex = index;
+      this.currentTrack = this.tracks[index];
+      this.resetPlayer();
+      this.play();
+    },
+    updateMediaSession() {
+      if ('mediaSession' in navigator) {
+        const track = this.currentTrack;
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: track.name,
+          artist: track.artist,
+          album: '',
+          artwork: [
+            { src: track.cover, sizes: '96x96', type: 'image/png' },
+            { src: track.cover, sizes: '128x128', type: 'image/png' },
+            { src: track.cover, sizes: '192x192', type: 'image/png' },
+            { src: track.cover, sizes: '256x256', type: 'image/png' },
+            { src: track.cover, sizes: '384x384', type: 'image/png' },
+            { src: track.cover, sizes: '512x512', type: 'image/png' }
+          ]
+        });
+      }
+    },
+    setupMediaControls() {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.setActionHandler('play', () => {
+          this.play();
+        });
+        navigator.mediaSession.setActionHandler('pause', () => {
+          this.play();
+        });
+        navigator.mediaSession.setActionHandler('previoustrack', () => {
+          this.prevTrack();
+        });
+        navigator.mediaSession.setActionHandler('nexttrack', () => {
+          this.nextTrack();
+        });
+        navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+          const skipTime = details.seekOffset || 10;
+          this.audio.currentTime = Math.max(this.audio.currentTime - skipTime, 0);
+        });
+        navigator.mediaSession.setActionHandler('seekforward', (details) => {
+          const skipTime = details.seekOffset || 10;
+          this.audio.currentTime = Math.min(this.audio.currentTime + skipTime, this.audio.duration);
+        });
+      }
     }
   },
   created() {
@@ -399,5 +197,9 @@ new Vue({
       link.as = "image"
       document.head.appendChild(link)
     }
+
+    // Setup media session controls for mobile devices
+    this.setupMediaControls();
+    this.updateMediaSession();
   }
 });
