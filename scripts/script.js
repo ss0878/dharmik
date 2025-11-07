@@ -15,7 +15,8 @@ new Vue({
       showPlaylist: false,
       shuffle: false,
       selectedPlaylist: 'All',
-      showTypeDropdown: false
+      showTypeDropdown: false,
+      showTypeControlMenu: false
     };
   },
   computed: {
@@ -128,9 +129,13 @@ new Vue({
     toggleTypeDropdown() {
       this.showTypeDropdown = !this.showTypeDropdown;
     },
+    toggleTypeControlMenu() {
+      this.showTypeControlMenu = !this.showTypeControlMenu;
+    },
     choosePlaylistType(type) {
       this.selectedPlaylist = type;
       this.showTypeDropdown = false;
+      this.showTypeControlMenu = false;
     },
     nextTrack() {
       this.transitionName = "scale-in";
