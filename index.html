@@ -55,6 +55,18 @@
                 <use xlink:href="#icon-playlist"></use>
               </svg>
             </div>
+            <!-- Front-page playlist type select button with dropdown -->
+            <div class="playlist-type-controls" @click.stop>
+              <div class="player-controls__item playlist-type-button" @click="toggleTypeControlMenu" :class="{ active: showTypeControlMenu }" :aria-expanded="showTypeControlMenu" aria-haspopup="listbox" :title="'Playlist: ' + selectedPlaylist" aria-label="Select playlist type">
+                <svg class="icon">
+                  <use xlink:href="#icon-funnel"></use>
+                </svg>
+              </div>
+              <ul class="controls-dropdown" v-show="showTypeControlMenu" role="listbox">
+                <li role="option" :aria-selected="selectedPlaylist==='All'" @click="choosePlaylistType('All')">All</li>
+                <li v-for="pl in playlists" :key="pl" role="option" :aria-selected="selectedPlaylist===pl" @click="choosePlaylistType(pl)">{{ pl }}</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="progress" ref="progress">
@@ -116,6 +128,11 @@
 
     <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
+
+        <symbol id="icon-funnel" viewBox="0 0 24 24">
+          <title>funnel</title>
+          <path d="M3 5h18l-7 8v5l-4 2v-7L3 5z" fill="currentColor"/>
+        </symbol>
 
         <symbol id="icon-infinity" viewBox="0 0 32 32">
           <title>icon-infinity</title>
