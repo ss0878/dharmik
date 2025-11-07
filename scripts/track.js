@@ -127,6 +127,58 @@ const tracks = [
     playlist: "ChardiKala"
   },
   {
+    name: "Mard Agamda",
+    artist: "Jazzy B",
+    cover: "https://cover.djpunjab.is/58197/300x700/mard-agamda-jazzy-b.jpg",
+    source: "https://s320.djpunjab.is/data/320/58197/308557/Mard%20Agamda%20-%20Jazzy%20B.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Yodhe Bukkde",
+    artist: "Soba Singh Sitara",
+    cover: "https://cover.djpunjab.is/58128/300x700/yodhe-bukkde-soba-singh-sitara.jpg",
+    source: "https://s320.djpunjab.is/data/320/58128/308420/Yodhe%20Bukkde%20-%20Soba%20Singh%20Sitara.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Yodhe",
+    artist: "Daljeet Chahal",
+    cover: "https://cover.djpunjab.is/58012/300x700/jodhe-daljeet-chahal.jpg",
+    source: "https://s320.djpunjab.is/data/320/58012/308205/Jodhe%20-%20Daljeet%20Chahal.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "ONE HISTORY",
+    artist: "Babbar Brar",
+    cover: "https://cover.djpunjab.is/57819/300x700/one-history-babbar-brar.jpg",
+    source: "https://s320.djpunjab.is/data/320/57819/307904/ONE%20HISTORY%20-%20Babbar%20Brar.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "1984",
+    artist: "Simiran Kaur Dhadli",
+    cover: "https://cover.djpunjab.is/57537/300x700/1984-simiran-kaur-dhadli.jpg",
+    source: "https://s320.djpunjab.is/data/320/57537/307457/1984%20-%20Simiran%20Kaur%20Dhadli.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Sarbloh De Neje",
+    artist: "Manjit Singh Sohi",
+    cover: "https://cover.djpunjab.is/57502/300x700/sarbloh-de-neje-manjit-singh-sohi.jpg",
+    source: "https://s320.djpunjab.is/data/320/57502/307404/Sarbloh%20De%20Neje%20-%20Manjit%20Singh%20Sohi.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Maut Nachdi",
+    artist: "Soba Singh Sitara",
+    cover: "https://cover.djpunjab.is/57359/300x700/maut-nachdi-soba-singh-sitara.jpg",
+    source: "https://s320.djpunjab.is/data/320/57359/307186/Maut%20Nachdi%20-%20Soba%20Singh%20Sitara.mp3",
+    playlist: "ChardiKala"
+  },
+
+
+
+  {
     name: "Sher Singh",
     artist: "Amrit Maan",
     cover: "https://cover.djpunjab.is/53215/300x700/Sher-Singh-Amrit-Maan.jpg",
