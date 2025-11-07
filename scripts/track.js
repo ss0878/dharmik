@@ -92,6 +92,41 @@ const tracks = [
     playlist: "Sehaj"
   },
   {
+    name: "The Khalsa",
+    artist: "Flop Likhari",
+    cover: "https://cover.djpunjab.is/58414/300x700/the-khalsa-flop-likhari.jpg",
+    source: "https://s320.djpunjab.is/data/320/58414/308923/The%20Khalsa%20-%20Flop%20Likhari.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Baajan Wala",
+    artist: "Mankirt Aulakh",
+    cover: "https://cover.djpunjab.is/58389/300x700/baajan-wala-mankirt-aulakh.jpg",
+    source: "https://s320.djpunjab.is/data/320/58389/308894/Baajan%20Wala%20-%20Mankirt%20Aulakh.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "The Real Anthem",
+    artist: "Khazala",
+    cover: "https://cover.djpunjab.is/58374/300x700/the-real-anthem-khazala.jpg",
+    source: "https://s320.djpunjab.is/data/320/58374/308872/The%20Real%20Anthem%20-%20Khazala.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Hind Ki Chadar",
+    artist: "Satinder Sartaaj",
+    cover: "https://cover.djpunjab.is/58361/300x700/hind-ki-chadar-satinder-sartaaj.jpg",
+    source: "https://s320.djpunjab.is/data/320/58361/308856/Hind%20Ki%20Chadar%20-%20Satinder%20Sartaaj.mp3",
+    playlist: "Sehaj"
+  },
+  {
+    name: "Khanda 18 Sair",
+    artist: "Manjit Singh Sohi",
+    cover: "https://cover.djpunjab.is/58229/300x700/khanda-18-sair-manjit-singh-sohi.jpg",
+    source: "https://s320.djpunjab.is/data/320/58229/308646/Khanda%2018%20Sair%20-%20Manjit%20Singh%20Sohi.mp3",
+    playlist: "ChardiKala"
+  },
+  {
     name: "Sher Singh",
     artist: "Amrit Maan",
     cover: "https://cover.djpunjab.is/53215/300x700/Sher-Singh-Amrit-Maan.jpg",
