@@ -8,6 +8,13 @@ const tracks = [
     playlist: "Sehaj"
   },
   {
+    name: "Jittan",
+    artist: "Gulab Sidhu",
+    cover: "https://cover.djpunjab.is/58459/300x700/jittan-gulab-sidhu.jpg",
+    source: "https://s320.djpunjab.is/data/320/58459/308999/Jittan%20-%20Gulab%20Sidhu.mp3",
+    playlist: "ChardiKala"
+  },
+  {
     name: "Namaskar",
     artist: "Diljit Dosanjh",
     cover: "https://cover.djpunjab.is/58420/300x300/namaskar-diljit-dosanjh.jpg",
