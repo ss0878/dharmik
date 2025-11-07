@@ -14,7 +14,8 @@ new Vue({
       transitionName: null,
       showPlaylist: false,
       shuffle: false,
-      selectedPlaylist: 'All'
+      selectedPlaylist: 'All',
+      showTypeDropdown: false
     };
   },
   computed: {
@@ -28,6 +29,14 @@ new Vue({
     filteredTracks() {
       if (this.selectedPlaylist === 'All') return this.tracks;
       return this.tracks.filter(t => t.playlist === this.selectedPlaylist);
+    },
+    filteredTrackIndexes() {
+      if (this.selectedPlaylist === 'All') return this.tracks.map((_, idx) => idx);
+      const out = [];
+      this.tracks.forEach((t, idx) => {
+        if (t.playlist === this.selectedPlaylist) out.push(idx);
+      });
+      return out;
     }
   },
   methods: {
@@ -102,11 +111,11 @@ new Vue({
     prevTrack() {
       this.transitionName = "scale-in";
       this.isShowCover = false;
-      if (this.currentTrackIndex > 0) {
-        this.currentTrackIndex--;
-      } else {
-        this.currentTrackIndex = this.tracks.length - 1;
-      }
+      const queue = this.filteredTrackIndexes;
+      if (!queue.length) return;
+      const pos = queue.indexOf(this.currentTrackIndex);
+      const newPos = pos > 0 ? pos - 1 : queue.length - 1;
+      this.currentTrackIndex = queue[newPos];
       this.currentTrack = this.tracks[this.currentTrackIndex];
       this.resetPlayer();
       if (this.showPlaylist) {
@@ -116,17 +125,24 @@ new Vue({
     toggleShuffle() {
       this.shuffle = !this.shuffle;
     },
+    toggleTypeDropdown() {
+      this.showTypeDropdown = !this.showTypeDropdown;
+    },
+    choosePlaylistType(type) {
+      this.selectedPlaylist = type;
+      this.showTypeDropdown = false;
+    },
     nextTrack() {
       this.transitionName = "scale-in";
       this.isShowCover = false;
+      const queue = this.filteredTrackIndexes;
+      if (!queue.length) return;
       if (this.shuffle) {
-        this.currentTrackIndex = Math.floor(Math.random() * this.tracks.length);
+        this.currentTrackIndex = queue[Math.floor(Math.random() * queue.length)];
       } else {
-        if (this.currentTrackIndex < this.tracks.length - 1) {
-          this.currentTrackIndex++;
-        } else {
-          this.currentTrackIndex = 0;
-        }
+        const pos = queue.indexOf(this.currentTrackIndex);
+        const newPos = (pos >= 0 && pos < queue.length - 1) ? pos + 1 : 0;
+        this.currentTrackIndex = queue[newPos];
       }
       this.currentTrack = this.tracks[this.currentTrackIndex];
       this.resetPlayer();
