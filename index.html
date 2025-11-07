@@ -29,9 +29,9 @@
           <div class="player-controls">
 
             
-            <div class="player-controls__item" @click="toggleShuffle" :class="{ active: shuffle }">
-              <svg viewBox="0 0 16 16" class="icon">
-                <path d="M11.537 1.027a.75.75 0 1 0-1.074 1.046L12.926 4.5H12.5A2.75 2.75 0 0 0 9.75 7.25v1.5A2.75 2.75 0 0 0 7 11.5H4.074l2.463-2.463a.75.75 0 1 0-1.074-1.046L1.29 12.16a.75.75 0 0 0 0 1.046l4.163 4.163a.75.75 0 1 0 1.074-1.046L4.074 13.875H7a4.25 4.25 0 0 0 4.25-4.25v-1.5a4.25 4.25 0 0 0-4.25-4.25H3.5a.75.75 0 0 0 0 1.5h9.426l-2.463-2.463a.75.75 0 0 0-1.074-1.046zM4.074 2.063 1.61 4.527a.75.75 0 0 0 1.074 1.046L4.074 4.18H7a.75.75 0 0 0 0-1.5H4.074z"/>
+            <div class="player-controls__item shuffle" @click="toggleShuffle" :class="{ active: shuffle }" aria-label="Shuffle" :aria-pressed="shuffle" title="Shuffle">
+              <svg class="icon">
+                <use xlink:href="#icon-shuffle"></use>
               </svg>
             </div>
             <div class="player-controls__item" @click="prevTrack">
@@ -83,12 +83,15 @@
                 <use xlink:href="#icon-close"></use>
               </svg>
             </button>
-            <div class="playlist-controls">
-              <label class="playlist-label" for="playlistSelect">Filter:</label>
-              <select id="playlistSelect" class="playlist-select" v-model="selectedPlaylist">
-                <option value="All">All</option>
-                <option v-for="pl in playlists" :key="pl" :value="pl">{{ pl }}</option>
-              </select>
+            <div class="playlist-type-dropdown" @click.stop>
+              <button class="dropdown-toggle" @click="toggleTypeDropdown" :aria-expanded="showTypeDropdown" aria-haspopup="listbox" title="Playlist type">
+                {{ selectedPlaylist }}
+                <span class="caret">▾</span>
+              </button>
+              <ul class="dropdown-menu" v-show="showTypeDropdown" role="listbox">
+                <li role="option" :aria-selected="selectedPlaylist==='All'" @click="choosePlaylistType('All')">All</li>
+                <li v-for="pl in playlists" :key="pl" role="option" :aria-selected="selectedPlaylist===pl" @click="choosePlaylistType(pl)">{{ pl }}</li>
+              </ul>
             </div>
           </div>
           <div class="playlist" :class="{ 'show': showPlaylist }">
@@ -157,9 +160,13 @@
           <path d="M29.696 13.696h-14.688l4.576-4.576c0.864-0.864 0.864-2.336 0-3.232-0.864-0.864-2.336-0.864-3.232 0l-8.448 8.48c-0.864 0.864-0.864 2.336 0 3.232l8.448 8.448c0.448 0.448 1.056 0.672 1.632 0.672s1.184-0.224 1.632-0.672c0.864-0.864 0.864-2.336 0-3.232l-4.608-4.576h14.688c1.248 0 2.304-1.024 2.304-2.304s-1.024-2.24-2.304-2.24z"></path>
           <path d="M2.304 5.248c-1.248 0-2.304 1.024-2.304 2.304v16.928c0 1.248 1.024 2.304 2.304 2.304s2.304-1.024 2.304-2.304v-16.928c-0.064-1.28-1.056-2.304-2.304-2.304z"></path>
         </symbol>
-        <symbol id="icon-shuffle" viewBox="0 0 32 32">
+        <symbol id="icon-shuffle" viewBox="0 0 24 24">
           <title>shuffle</title>
-          <path d="M25.6 12.8c-1.28 0-2.56-0.512-3.584-1.536l-3.072-3.072c-1.024-1.024-2.304-1.536-3.584-1.536s-2.56 0.512-3.584 1.536c-0.64 0.64-1.024 1.536-1.024 2.56s0.384 1.92 1.024 2.56l3.072 3.072c1.024 1.024 2.304 1.536 3.584 1.536s2.56-0.512 3.584-1.536l0.256-0.256c0.128-0.128 0.384-0.128 0.512 0s0.128 0.384 0 0.512l-0.256 0.256c-1.28 1.28-3.072 2.048-5.12 2.048s-3.84-0.768-5.12-2.048l-3.072-3.072c-1.28-1.28-2.048-3.072-2.048-5.12s0.768-3.84 2.048-5.12c1.28-1.28 3.072-2.048 5.12-2.048s3.84 0.768 5.12 2.048l3.072 3.072c1.024 1.024 2.304 1.536 3.584 1.536s2.56-0.512 3.584-1.536c0.64-0.64 1.024-1.536 1.024-2.56s-0.384-1.92-1.024-2.56c-1.024-1.024-2.304-1.536-3.584-1.536s-2.56 0.512-3.584 1.536l-3.072 3.072c-1.024 1.024-2.304 1.536-3.584 1.536s-2.56-0.512-3.584-1.536c-0.64-0.64-1.024-1.536-1.024-2.56s0.384-1.92 1.024-2.56c1.024-1.024 2.304-1.536 3.584-1.536s2.56 0.512 3.584 1.536l0.256 0.256c0.128 0.128 0.128 0.384 0 0.512s-0.384 0.128-0.512 0l-0.256-0.256c-1.28-1.28-3.072-2.048-5.12-2.048s-3.84 0.768-5.12 2.048c-2.816 2.816-2.816 7.424 0 10.24 1.28 1.28 3.072 2.048 5.12 2.048s3.84-0.768 5.12-2.048l3.072-3.072c1.024-1.024 2.304-1.536 3.584-1.536s2.56 0.512 3.584 1.536c0.64 0.64 1.024 1.536 1.024 2.56s-0.384 1.92-1.024 2.56c-1.024 1.024-2.304 1.536-3.584 1.536s-2.56-0.512-3.584-1.536l-3.072-3.072c-1.024-1.024-2.304-1.536-3.584-1.536s-2.56 0.512-3.584 1.536c-0.64 0.64-1.024 1.536-1.024 2.56s0.384 1.92 1.024 2.56c1.024 1.024 2.304 1.536 3.584 1.536s2.56-0.512 3.584-1.536l0.256-0.256c0.128-0.128 0.384-0.128 0.512 0s0.128 0.384 0 0.512l-0.256 0.256c-1.28 1.28-3.072 2.048-5.12 2.048s-3.84-0.768-5.12-2.048l-3.072-3.072c-1.28-1.28-2.048-3.072-2.048-5.12s0.768-3.84 2.048-5.12c1.28-1.28 3.072-2.048 5.12-2.048s3.84 0.768 5.12 2.048l3.072 3.072c1.024 1.024 2.304 1.536 3.584 1.536s2.56-0.512 3.584-1.536c2.816-2.816 2.816-7.424 0-10.24-1.28-1.28-3.072-2.048-5.12-2.048z"></path>
+          <!-- Clear crossed-arrows shuffle icon using strokes for visibility -->
+          <path d="M16 3h3v3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 18h5l6-9h7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 21h3v-3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 6h5l6 9h7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
         <symbol id="icon-playlist" viewBox="0 0 32 32">
           <title>playlist</title>
