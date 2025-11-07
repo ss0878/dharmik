@@ -17,7 +17,7 @@
     <title>Mini Player</title>
   </head>
   <body>
-    <div class="wrapper" id="app">
+    <div class="wrapper" id="app" :class="{ centered: !showPlaylist }">
       <div class="player-container">
         <div class="player">
         <div class="player__top">
@@ -30,8 +30,8 @@
 
             
             <div class="player-controls__item" @click="toggleShuffle" :class="{ active: shuffle }">
-              <svg class="icon">
-                <use xlink:href="#icon-shuffle"></use>
+              <svg viewBox="0 0 16 16" class="icon">
+                <path d="M11.537 1.027a.75.75 0 1 0-1.074 1.046L12.926 4.5H12.5A2.75 2.75 0 0 0 9.75 7.25v1.5A2.75 2.75 0 0 0 7 11.5H4.074l2.463-2.463a.75.75 0 1 0-1.074-1.046L1.29 12.16a.75.75 0 0 0 0 1.046l4.163 4.163a.75.75 0 1 0 1.074-1.046L4.074 13.875H7a4.25 4.25 0 0 0 4.25-4.25v-1.5a4.25 4.25 0 0 0-4.25-4.25H3.5a.75.75 0 0 0 0 1.5h9.426l-2.463-2.463a.75.75 0 0 0-1.074-1.046zM4.074 2.063 1.61 4.527a.75.75 0 0 0 1.074 1.046L4.074 4.18H7a.75.75 0 0 0 0-1.5H4.074z"/>
               </svg>
             </div>
             <div class="player-controls__item" @click="prevTrack">
@@ -73,31 +73,38 @@
         <div v-cloak></div>
       </div>
       
-      <!-- Playlist Container -->
-      <div class="playlist-container" v-show="showPlaylist" :class="{ 'show': showPlaylist }">
-        <div class="playlist-header">
-          <h3 class="playlist-title">Playlist</h3>
-          <button class="playlist-close" @click="togglePlaylist">
-            <svg class="icon">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-        
-        <div class="playlist" :class="{ 'show': showPlaylist }">
-          <div 
-            class="playlist-item" 
-            v-for="(track, index) in tracks" 
-            :key="index"
-            :class="{ 'active': index === currentTrackIndex }"
-            @click="selectTrack(index)"
-          >
-            <img class="playlist-item-cover" :src="track.cover" :alt="track.name">
-            <div class="playlist-item-info">
-              <h4 class="playlist-item-title">{{ track.name }}</h4>
-              <p class="playlist-item-artist">{{ track.artist }}</p>
+      <!-- Playlist Overlay Top -->
+      <div class="playlist-overlay" v-show="showPlaylist" @click.self="closePlaylist">
+        <div class="playlist-container" :class="{ 'show': showPlaylist }" @click.stop>
+          <div class="playlist-header">
+            <h3 class="playlist-title">Playlist</h3>
+            <button class="playlist-close" @click="togglePlaylist">
+              <svg class="icon">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+            <div class="playlist-controls">
+              <label class="playlist-label" for="playlistSelect">Filter:</label>
+              <select id="playlistSelect" class="playlist-select" v-model="selectedPlaylist">
+                <option value="All">All</option>
+                <option v-for="pl in playlists" :key="pl" :value="pl">{{ pl }}</option>
+              </select>
             </div>
-            <div class="playlist-item-duration">{{ track.duration || '0:00' }}</div>
+          </div>
+          <div class="playlist" :class="{ 'show': showPlaylist }">
+            <div 
+              class="playlist-item" 
+              v-for="track in filteredTracks" 
+              :key="track.name + track.artist"
+              :class="{ 'active': tracks.indexOf(track) === currentTrackIndex }"
+              @click="selectTrack(tracks.indexOf(track))"
+            >
+              <img class="playlist-item-cover" :src="track.cover" :alt="track.name">
+              <div class="playlist-item-info">
+                <h4 class="playlist-item-title">{{ track.name }}</h4>
+                <p class="playlist-item-artist">{{ track.artist }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
