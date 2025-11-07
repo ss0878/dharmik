@@ -89,6 +89,70 @@ body {
   color: #333;
   margin: 0;
 }
+/* Playlist type dropdown */
+.playlist-type-dropdown {
+  margin-left: auto;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.playlist-type-dropdown .dropdown-toggle {
+  background: #fff;
+  border: 1px solid #d6deea;
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #2b3340;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.playlist-type-dropdown .dropdown-toggle .caret {
+  font-size: 12px;
+  color: #6f7a8c;
+}
+.playlist-type-dropdown .dropdown-toggle:hover {
+  border-color: #b8c6da;
+}
+.playlist-type-dropdown .dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  background: #fff;
+  border: 1px solid #d6deea;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(76, 70, 124, 0.15);
+  min-width: 160px;
+  padding: 6px;
+  z-index: 1001;
+}
+.playlist-type-dropdown .dropdown-menu li {
+  list-style: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #2b3340;
+}
+.playlist-type-dropdown .dropdown-menu li:hover {
+  background: #f1f5fb;
+}
+.playlist-type-dropdown .dropdown-menu li[aria-selected="true"] {
+  background: #e8eef8;
+  color: #532ab9;
+}
+/* Inline variant for controls bar */
+.player-controls .playlist-type-dropdown.inline {
+  margin-top: 6px;
+}
+.playlist-type-dropdown.inline .dropdown-toggle {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+.playlist-type-dropdown.inline .dropdown-menu {
+  min-width: 140px;
+}
 /* Playlist filter controls */
 .playlist-controls {
   display: flex;
@@ -214,8 +278,8 @@ body {
 
 .player {
   background: #eef3f7;
-  width: 410px;
-  height: 480px;
+  width: auto;
+  height: auto;
   box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
   border-radius: 15px;
   padding: 30px;
@@ -384,6 +448,47 @@ body {
 .player-controls__item .icon {
   position: relative;
   z-index: 2;
+}
+.player-controls__item.shuffle .icon {
+  width: 28px;
+  height: 28px;
+}
+.player-controls__item.playlist-type-button .icon {
+  width: 24px;
+  height: 24px;
+}
+.playlist-type-controls {
+  position: relative;
+}
+.controls-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  background: #fff;
+  border: 1px solid #d6deea;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(76, 70, 124, 0.15);
+  min-width: 160px;
+  padding: 6px;
+  z-index: 1001;
+}
+.controls-dropdown li {
+  list-style: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #2b3340;
+}
+.controls-dropdown li:hover {
+  background: #f1f5fb;
+}
+.controls-dropdown li[aria-selected="true"] {
+  background: #e8eef8;
+  color: #532ab9;
+}
+.player-controls__item.playlist-type-switch .icon {
+  width: 24px;
+  height: 24px;
 }
 .player-controls__item.-xl {
   margin-bottom: 0;
