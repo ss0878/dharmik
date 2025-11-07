@@ -1,6 +1,13 @@
 // Track data for the music player
 const tracks = [
   {
+    name: "Baba Nanak",
+    artist: "Deepak Dhillon",
+    cover: "https://cover.djpunjab.is/58461/300x700/baba-nanak-deepak-dhillon.jpg",
+    source: "https://s320.djpunjab.is/data/320/58461/309001/Baba%20Nanak%20-%20Deepak%20Dhillon.mp3",
+    playlist: "Sehaj"
+  },
+  {
     name: "Namaskar",
     artist: "Diljit Dosanjh",
     cover: "https://cover.djpunjab.is/58420/300x300/namaskar-diljit-dosanjh.jpg",
