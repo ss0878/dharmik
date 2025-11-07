@@ -13,8 +13,22 @@ new Vue({
       currentTrackIndex: 0,
       transitionName: null,
       showPlaylist: false,
-      shuffle: false
+      shuffle: false,
+      selectedPlaylist: 'All'
     };
+  },
+  computed: {
+    playlists() {
+      const set = new Set();
+      this.tracks.forEach(t => {
+        if (t.playlist) set.add(t.playlist);
+      });
+      return Array.from(set);
+    },
+    filteredTracks() {
+      if (this.selectedPlaylist === 'All') return this.tracks;
+      return this.tracks.filter(t => t.playlist === this.selectedPlaylist);
+    }
   },
   methods: {
     play() {
@@ -142,6 +156,9 @@ new Vue({
         });
       }
     },
+    closePlaylist() {
+      this.showPlaylist = false;
+    },
     selectTrack(index) {
       this.currentTrackIndex = index;
       this.currentTrack = this.tracks[index];
@@ -206,6 +223,10 @@ new Vue({
     }
   },
   created() {
+    // Register offline service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
     let vm = this;
     this.currentTrack = this.tracks[0];
     this.audio = new Audio();
