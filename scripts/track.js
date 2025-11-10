@@ -224,6 +224,21 @@ const tracks = [
     source: "https://s320.djpunjab.is/data/320/56755/306320/Chamkaur%20Di%20Garhi%20-%20Jass%20Bajwa.mp3",
     playlist: "ChardiKala"
   },
+  {
+    name: "Kaal",
+    artist: "Bukka Jatt",
+    cover: "https://cover.djpunjab.is/56754/300x700/kaal-bukka-jatt.jpg",
+    source: "https://s320.djpunjab.is/data/320/56754/306319/Kaal%20-%20Bukka%20Jatt.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Maa Gujri De Potey",
+    artist: "Jazzy B",
+    cover: "https://cover.djpunjab.is/56753/300x700/maa-gujri-de-potey-jazzy-b.jpg",
+    source: "https://s320.djpunjab.is/data/320/56753/306318/Maa%20Gujri%20De%20Potey%20-%20Jazzy%20B.mp3",
+    playlist: "ChardiKala"
+  },
+
 
 
   {
@@ -402,4 +417,5 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
 
