@@ -238,7 +238,27 @@ const tracks = [
     source: "https://s320.djpunjab.is/data/320/56753/306318/Maa%20Gujri%20De%20Potey%20-%20Jazzy%20B.mp3",
     playlist: "ChardiKala"
   },
-
+  {
+    name: "Soorme Ahge Neh",
+    artist: "Amar Sehmbi",
+    cover: "https://cover.djpunjab.is/56740/300x700/soorme-ahge-neh-amar-sehmbi.jpg",
+    source: "https://s320.djpunjab.is/data/320/56740/306302/Soorme%20Ahge%20Neh%20-%20Amar%20Sehmbi.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Baap C",
+    artist: "Amar Sandhu",
+    cover: "https://cover.djpunjab.is/56734/300x700/baap-c-amar-sandhu.jpg",
+    source: "https://s320.djpunjab.is/data/320/56734/306296/Baap%20C%20-%20Amar%20Sandhu.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Kinne Sohne Lagde",
+    artist: "Baba Gulab Singh Ji",
+    cover: "https://cover.djpunjab.is/56731/300x700/kinne-sohne-lagde-baba-gulab-singh-ji.jpg",
+    source: "https://s320.djpunjab.is/data/320/56731/306293/Kinne%20Sohne%20Lagde%20-%20Baba%20Gulab%20Singh%20Ji.mp3",
+    playlist: "Sehaj"
+  },
 
 
   {
@@ -417,5 +437,6 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
 
 
