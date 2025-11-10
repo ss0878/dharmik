@@ -175,7 +175,55 @@ const tracks = [
     source: "https://s320.djpunjab.is/data/320/57359/307186/Maut%20Nachdi%20-%20Soba%20Singh%20Sitara.mp3",
     playlist: "ChardiKala"
   },
-
+  {
+    name: "Maut Boldi",
+    artist: "Manjit Singh Sohi",
+    cover: "https://cover.djpunjab.is/56908/300x700/maut-boldi-manjit-singh-sohi.jpg",
+    source: "https://s320.djpunjab.is/data/320/56908/306529/Maut%20Boldi%20-%20Manjit%20Singh%20Sohi.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Amar Shaheed Baba Deep Singh Ji",
+    artist: "Guri Lahoria",
+    cover: "https://cover.djpunjab.is/56874/300x700/amar-shaheed-baba-deep-singh-ji-guri-lahoria.jpg",
+    source: "https://s320.djpunjab.is/data/320/56874/306485/Amar%20Shaheed%20Baba%20Deep%20Singh%20Ji%20-%20Guri%20Lahoria.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Shukar Malka",
+    artist: "Gulab Sidhu",
+    cover: "https://cover.djpunjab.is/56782/300x700/shukar-malka-gulab-sidhu.jpg",
+    source: "https://s320.djpunjab.is/data/320/56782/306347/Shukar%20Malka%20-%20Gulab%20Sidhu.mp3",
+    playlist: "Sehaj"
+  },
+  {
+    name: "Jujhar Aakhda",
+    artist: "Daljeet Chahal",
+    cover: "https://cover.djpunjab.is/56763/300x700/jujhar-aakhda-daljeet-chahal.jpg",
+    source: "https://s320.djpunjab.is/data/320/56763/306328/Jujhar%20Aakhda%20-%20Daljeet%20Chahal.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Warriors",
+    artist: "Ravinder Grewal",
+    cover: "https://cover.djpunjab.is/56759/300x700/warriors-ravinder-grewal.jpg",
+    source: "https://s320.djpunjab.is/data/320/56759/306324/Warriors%20-%20Ravinder%20Grewal.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Akaal",
+    artist: "Kulbir Jhinjer",
+    cover: "https://cover.djpunjab.is/56757/300x700/akaal-kulbir-jhinjer.jpg",
+    source: "https://s320.djpunjab.is/data/320/56757/306322/Akaal%20-%20Kulbir%20Jhinjer.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Chamkaur Di Garhi",
+    artist: "Jass Bajwa",
+    cover: "https://cover.djpunjab.is/56755/300x700/chamkaur-di-garhi-jass-bajwa.jpg",
+    source: "https://s320.djpunjab.is/data/320/56755/306320/Chamkaur%20Di%20Garhi%20-%20Jass%20Bajwa.mp3",
+    playlist: "ChardiKala"
+  },
 
 
   {
@@ -354,3 +402,4 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
