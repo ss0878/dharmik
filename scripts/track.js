@@ -1,6 +1,20 @@
 // Track data for the music player
 const tracks = [
   {
+    name: "Mahabir Rass",
+    artist: "Harvi",
+    cover: "https://cover.djpunjab.is/58734/300x700/mahabir-rass-harvi.jpg",
+    source: "https://s320.djpunjab.is/data/320/58734/309435/Mahabir%20Rass%20-%20Harvi.mp3",
+    playlist: "ChardiKala"
+  },
+  {
+    name: "Klaa Warte",
+    artist: "Manjit Singh Sohi",
+    cover: "https://cover.djpunjab.is/58731/300x700/klaa-warte-manjit-singh-sohi.jpg",
+    source: "https://s320.djpunjab.is/data/320/58731/309432/Klaa%20Warte%20-%20Manjit%20Singh%20Sohi.mp3",
+    playlist: "ChardiKala"
+  },
+  {
     name: "Baba Nanak",
     artist: "Deepak Dhillon",
     cover: "https://cover.djpunjab.is/58461/300x700/baba-nanak-deepak-dhillon.jpg",
@@ -437,6 +451,7 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
 
 
 
