@@ -1,6 +1,13 @@
 // Track data for the music player
 const tracks = [
   {
+    name: "Dhan Aa Baaza Waleya",
+    artist: "Pamma Dumewal",
+    cover: "https://cover.djpunjab.is/58753/300x700/dhan-aa-baaza-waleya-pamma-dumewal.jpg",
+    source: "https://s320.djpunjab.is/data/320/58753/309469/Dhan%20Aa%20Baaza%20Waleya%20-%20Pamma%20Dumewal.mp3",
+    playlist: "ChardiKala"
+  },
+  {
     name: "Mahabir Rass",
     artist: "Harvi",
     cover: "https://cover.djpunjab.is/58734/300x700/mahabir-rass-harvi.jpg",
@@ -451,6 +458,7 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
 
 
 
