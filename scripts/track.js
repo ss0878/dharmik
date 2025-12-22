@@ -8,6 +8,13 @@ const tracks = [
     playlist: "ChardiKala"
   },
   {
+    name: "Mera Rakha",
+    artist: "Guri",
+    cover: "https://cover.djpunjab.is/58750/300x700/mera-rakha-guri.jpg",
+    source: "https://s320.djpunjab.is/data/320/58750/309466/Mera%20Rakha%20-%20Guri.mp3",
+    playlist: "ChardiKala"
+  },
+  {
     name: "Mahabir Rass",
     artist: "Harvi",
     cover: "https://cover.djpunjab.is/58734/300x700/mahabir-rass-harvi.jpg",
@@ -458,6 +465,7 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
 
 
 
