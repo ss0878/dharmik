@@ -1,6 +1,13 @@
 // Track data for the music player
 const tracks = [
   {
+    name: "Jung Culture",
+    artist: "Jass Bajwa",
+    cover: "https://cover.djpunjab.is/58764/300x700/jung-culture-jass-bajwa.jpg",
+    source: "https://s320.djpunjab.is/data/320/58764/309491/Jung%20Culture%20-%20Jass%20Bajwa.mp3",
+    playlist: "ChardiKala"
+  },
+  {
     name: "Dhan Aa Baaza Waleya",
     artist: "Pamma Dumewal",
     cover: "https://cover.djpunjab.is/58753/300x700/dhan-aa-baaza-waleya-pamma-dumewal.jpg",
@@ -465,6 +472,7 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
 
 
 
