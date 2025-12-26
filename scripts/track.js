@@ -1,6 +1,13 @@
 // Track data for the music player
 const tracks = [
   {
+    name: "Sacrifices",
+    artist: "Gurinder Gill",
+    cover: "https://cover.djpunjab.is/58765/300x700/sacrifices-gurinder-gill.jpg",
+    source: "https://s320.djpunjab.is/data/320/58765/309492/Sacrifices%20-%20Gurinder%20Gill.mp3",
+    playlist: "ChardiKala"
+  },
+  {
     name: "Jung Culture",
     artist: "Jass Bajwa",
     cover: "https://cover.djpunjab.is/58764/300x700/jung-culture-jass-bajwa.jpg",
@@ -472,6 +479,7 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
   window.tracks = tracks;
 }
+
 
 
 
